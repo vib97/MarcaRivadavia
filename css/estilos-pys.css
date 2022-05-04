@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html{
+	height: 100vh;
+}
+
+body{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		"header"
+		"nav"
+		"main"
+		"footer";
+	font-family: 'Rubik', sans-serif;
+	background-color: #BBBBBB;
+	padding: 0px;
+	margin: 0px;
+}
+
+header{
+	grid-area: header;
+	font-family: 'Rubik', sans-serif;
+	background: rgb(128,0,0,0.3);
+	padding: 1px 1px 4px 1px;
+	margin: 0px;
+}
+
+header img{
+	float: left;
+	width: 75px;
+	height: 75px;
+	background: rgb(128,0,0,0.25);
+	padding: 0px;
+	margin: 5px;
+}
+
+header h1{
+	position: relative;
+	padding: auto;
+	font-weight: bold;
+	font-size: 32pt;
+	color: #800000;
+}
+
+header nav{
+	grid-area: nav;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+nav li{
+	float: right;
+	border-left: 1px solid #BBBBBB;
+}
+
+nav li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover:not(.active){
+	background-color: #111111;
+}
+
+.active{
+	background-color: #800000;
+}
+
+main{
+	grid-area: main;
+	margin: 1% 10% 1% 10%;
+}
+
+main h1{
+	font-size: 25pt;
+	text-align: center;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+section{
+	background-color: rgb(128,0,0,0.15);
+}
+
+section h3{
+	color: #800000;
+}
+
+section img{
+	width: 100%;
+}
+
+span{
+	display: inline;
+	padding: 1%;
+}
+
+footer{
+	grid-area: footer;
+	font-size: 13pt;
+	text-align: center;
+	font-weight: bold;
+	color: #800000;
+	border: 2px solid #800000;
+	border-radius: 17px;
+	background: rgb(128,0,0,0.3);
+	margin: 0% 15%;
+	padding: auto;
+}
+
+@media only screen and (min-width: 640px){
+	body{
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, auto);
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+		font-family: 'Rubik', sans-serif;
+		background-color: #BBBBBB;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	header img{
+		width: 150px;
+		height: 150px;
+	}
+
+	header h1{
+		padding: 0px 0px 0px 180px;
+	}
+
+}

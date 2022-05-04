@@ -1,0 +1,479 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html{
+	height: 100vh;
+}
+
+body{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(6,auto);
+	grid-template-areas:
+		"header"
+		"nav"
+		"section-objetivo"
+		"section-contacto"
+		"section-partido"
+		"footer";
+	font-family: 'Rubik', sans-serif;
+	background-color: #BBBBBB;
+	padding: 0px;
+	margin: 0px;
+}
+
+header{
+	grid-area: header;
+	font-family: 'Rubik', sans-serif;
+	background: rgb(128,0,0,0.3);
+	padding: 1px 1px 4px 1px;
+	margin: 0px;
+}
+
+header img{
+	float: left;
+	width: 75px;
+	height: 75px;
+	background: rgb(128,0,0,0.25);
+	padding: 0px;
+	margin: 5px;
+}
+
+header h1{
+	position: relative;
+	padding: auto;
+	font-weight: bold;
+	font-size: 32pt;
+	color: #800000;
+}
+
+header nav{
+	grid-area: nav;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+nav li{
+	float: right;
+	border-left: 1px solid #BBBBBB;
+}
+
+nav li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover:not(.active){
+	background-color: #111111;
+}
+
+.active{
+	background-color: #800000;
+}
+
+h1{
+	font-weight: bold;
+	font-size: 27pt;
+	color: #800000;
+}
+
+.section-objetivo p, .section-contacto p, .section-partido p{
+	font-size: 15pt;
+}
+
+.section-objetivo{
+	grid-area: section-objetivo;
+	margin: 1%;
+}
+
+.pys-btn{
+	margin: auto;
+	padding: auto;
+	background-color: rgb(128,0,0,1);
+	color: #FFFFFF;
+	font-size: 15pt;
+	text-align: center;
+}
+
+.section-contacto{
+	grid-area: section-contacto;
+	margin: 1%;
+}
+
+.ctc-btn{
+	margin: 0px;
+	padding: 1px 3px;
+	background-color: rgb(128,0,0,1);
+	color: #FFFFFF;
+	font-size: 15pt;
+}
+
+.section-partido{
+	grid-area: section-partido;
+	margin: 1%;
+}
+
+.section-partido table{
+	margin: auto;
+}
+
+table img{
+	height: 180px;
+}
+
+.mapa-riv{
+	border: 2px solid #800000;
+	width: 350px;
+	height: 180px;
+	margin: auto;
+}
+
+aside{
+	grid-area: aside;
+}
+
+@media only screen and (max-width: 640px){
+	aside{
+		display: none;
+	}
+}
+
+footer{
+	grid-area: footer;
+	font-size: 13pt;
+	text-align: center;
+	font-weight: bold;
+	color: #800000;
+	border: 2px solid #800000;
+	border-radius: 17px;
+	background: rgb(128,0,0,0.3);
+	margin: 0% 15%;
+	padding: auto;
+}
+
+@media only screen and (min-width: 640px){
+
+	body, html{
+		height: 100vh;
+	}	
+
+	body{
+		display: grid;
+		grid-template-columns: auto 33%;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas:
+			"header           header"
+			"section-objetivo aside"
+			"section-contacto aside"
+			"section-partido  aside"
+			"footer           footer";
+		font-family: 'Rubik', sans-serif;
+		background-color: #BBBBBB;
+		padding: 0px;
+		margin: 0px;
+	}	
+
+	header{
+		grid-area: header;
+		font-family: 'Rubik', sans-serif;
+		background: rgb(128,0,0,0.3);
+		padding: 1px 1px 4px 1px;
+		margin: 0px;
+	}	
+
+	header img{
+		float: left;
+		width: 150px;
+		height: 150px;
+		background: rgb(128,0,0,0.25);
+		padding: 0px;
+		margin: 5px;
+	}	
+
+	header h1{
+		position: relative;
+		padding: 0px 0px 0px 180px;
+		font-weight: bold;
+		font-size: 32pt;
+		color: #800000;
+	}	
+
+	nav ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333333;
+	}	
+
+	nav li{
+		float: right;
+		border-left: 1px solid #BBBBBB;
+	}	
+
+	nav li a{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}	
+
+	nav li a:hover:not(.active){
+		background-color: #111111;
+	}	
+
+	.active{
+		background-color: #800000;
+	}	
+
+	h1{
+		font-weight: bold;
+		font-size: 27pt;
+		color: #800000;
+	}	
+
+	.section-objetivo p, .section-contacto p, .section-partido p{
+		font-size: 15pt;
+	}	
+
+	.section-objetivo{
+		grid-area: section-objetivo;
+		margin: 15px 35px;
+	}	
+
+	.pys-btn{
+		display: block;
+		padding: 1%;
+		background-color: rgb(128,0,0,1);
+		color: #FFFFFF;
+		font-size: 15pt;
+		text-align: center;
+	}
+
+	.section-contacto{
+		grid-area: section-contacto;
+		margin: 15px 35px;
+	}	
+
+	.ctc-btn{
+		margin: 0px;
+		padding: 1px 3px;
+		background-color: rgb(128,0,0,1);
+		color: #FFFFFF;
+		font-size: 15pt;
+	}	
+
+	.section-partido{
+		grid-area: section-partido;
+		margin: 15px 35px;
+	}	
+
+	.section-partido table{
+		margin: 0% auto;
+	}
+
+	table img{
+		height: 220px;
+	}
+
+	.mapa-riv{
+		border: 2px solid #800000;
+		width: 550px;
+		height: 220px;
+		margin: auto;
+	}
+
+	aside{
+		grid-area: aside;
+	}
+
+	aside img{
+		display: block;
+		max-width: 330px;
+		max-height: 1377px;
+	}
+
+	footer{
+		grid-area: footer;
+		font-size: 13pt;
+		text-align: center;
+		font-weight: bold;
+		color: #800000;
+		border: 2px solid #800000;
+		border-radius: 17px;
+		background: rgb(128,0,0,0.3);
+		margin: 0% 15%;
+		padding: auto;
+	}
+
+}
+
+@media only screen and (min-width: 1280px){
+
+	body, html{
+		height: 100vh;
+	}	
+
+	body{
+		display: grid;
+		grid-template-columns: auto 37%;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas:
+			"header           header"
+			"section-objetivo aside"
+			"section-contacto aside"
+			"section-partido  aside"
+			"footer           footer";
+		font-family: 'Rubik', sans-serif;
+		background-color: #BBBBBB;
+		padding: 0px;
+		margin: 0px;
+	}	
+
+	header{
+		grid-area: header;
+		font-family: 'Rubik', sans-serif;
+		background: rgb(128,0,0,0.3);
+		padding: 1px 1px 4px 1px;
+		margin: 0px;
+	}	
+
+	header img{
+		float: left;
+		width: 150px;
+		height: 150px;
+		background: rgb(128,0,0,0.25);
+		padding: 0px;
+		margin: 5px;
+	}	
+
+	header h1{
+		position: relative;
+		padding: 0px 0px 0px 180px;
+		font-weight: bold;
+		font-size: 32pt;
+		color: #800000;
+	}	
+
+	nav ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333333;
+	}	
+
+	nav li{
+		float: right;
+		border-left: 1px solid #BBBBBB;
+	}	
+
+	nav li a{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}	
+
+	nav li a:hover:not(.active){
+		background-color: #111111;
+	}	
+
+	.active{
+		background-color: #800000;
+	}	
+
+	h1{
+		font-weight: bold;
+		font-size: 27pt;
+		color: #800000;
+	}	
+
+	.section-objetivo p, .section-contacto p, .section-partido p{
+		font-size: 15pt;
+	}	
+
+	.section-objetivo{
+		grid-area: section-objetivo;
+		margin: 15px 35px;
+	}	
+
+	.pys-btn{
+		margin: 5px 50px;
+		padding: 7px 30px;
+		background-color: rgb(128,0,0,1);
+		color: #FFFFFF;
+		font-size: 15pt;
+		text-align: center;
+	}	
+
+	.section-contacto{
+		grid-area: section-contacto;
+		margin: 15px 35px;
+	}	
+
+	.ctc-btn{
+		margin: 0px;
+		padding: 1px 3px;
+		background-color: rgb(128,0,0,1);
+		color: #FFFFFF;
+		font-size: 15pt;
+	}	
+
+	.section-partido{
+		grid-area: section-partido;
+		margin: 15px 35px;
+	}	
+
+	.section-partido table{
+		margin: 0% auto;
+	}
+
+	table img{
+		height: 300px;
+	}
+
+	.mapa-riv{
+		border: 2px solid #800000;
+		width: 640px;
+		height: 400px;
+		margin: auto;
+	}
+
+	aside{
+		grid-area: aside;
+	}
+
+	aside img{
+		display: block;
+		max-width: 992px;
+		max-height: 4140px;
+		margin: 3px;
+	}
+
+	footer{
+		grid-area: footer;
+		font-size: 13pt;
+		text-align: center;
+		font-weight: bold;
+		color: #800000;
+		border: 2px solid #800000;
+		border-radius: 17px;
+		background: rgb(128,0,0,0.3);
+		margin: 0% 15%;
+		padding: auto;
+	}
+
+}
